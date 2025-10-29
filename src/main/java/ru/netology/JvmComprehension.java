@@ -28,7 +28,7 @@ public class JvmComprehension {
                                                     // В стековом фрейме printAll создаётся ссылка uselessVar, указывающая на него
         System.out.println(o.toString() + i + ii);  // 6 Вызывается o.toString() → метод из класса Object (метаданные в Metaspace)
                 //Происходит конкатенация строк создаются временные объекты StringBuilder, String в heap
-                //Результат выводится в консоль
+                //Результат выводится в консоль //
 
     }
 }
