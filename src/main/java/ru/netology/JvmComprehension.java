@@ -2,7 +2,9 @@ package ru.netology;
 
 public class JvmComprehension {
     public static void main(String[] args) {
-        int i = 1;                      // 1
+        int i = 1;                      //  1 Создаётся локальная переменная i типа int
+                                        // Значение 1 записывается в стековый фрейм метода main
+                                        //Это примитив, он не создаёт объект в heap// 1
         Object o = new Object();        // 2
         Integer ii = 2;                 // 3
         printAll(o, i, ii);             // 4
