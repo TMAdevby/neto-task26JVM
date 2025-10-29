@@ -5,7 +5,9 @@ public class JvmComprehension {
         int i = 1;                      //  1 Создаётся локальная переменная i типа int
                                         // Значение 1 записывается в стековый фрейм метода main
                                         //Это примитив, он не создаёт объект в heap// 1
-        Object o = new Object();        // 2
+        Object o = new Object();        // 2 В heap создаётся новый экземпляр java.lang.Object
+                                        //В стеке (фрейм main) создаётся ссылка o, указывающая на этот объект в heap
+                                        //Класс Object уже загружен → его метаданные в Metaspace
         Integer ii = 2;                 // 3
         printAll(o, i, ii);             // 4
         System.out.println("finished"); // 7
