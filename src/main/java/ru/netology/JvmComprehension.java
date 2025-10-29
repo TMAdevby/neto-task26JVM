@@ -22,7 +22,11 @@ public class JvmComprehension {
     }
 
     private static void printAll(Object o, int i, Integer ii) {
-        Integer uselessVar = 700;                   // 5
-        System.out.println(o.toString() + i + ii);  // 6
+        Integer uselessVar = 700;                   // 5 700 не входит в кэш Integer создаётся новый объект Integer(700) в heap
+                                                    // В стековом фрейме printAll создаётся ссылка uselessVar, указывающая на него
+        System.out.println(o.toString() + i + ii);  // 6 Вызывается o.toString() → метод из класса Object (метаданные в Metaspace)
+                //Происходит конкатенация строк создаются временные объекты StringBuilder, String в heap
+                //Результат выводится в консоль
+
     }
 }
