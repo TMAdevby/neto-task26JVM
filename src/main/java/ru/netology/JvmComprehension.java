@@ -18,7 +18,9 @@ public class JvmComprehension {
                                             //Ссылка o (копия указателя на тот же Object)
                                             //Значение i = 1 (примитив — копируется по значению)
                                             //Ссылка ii (копия указателя на Integer(2))
-        System.out.println("finished"); // 7
+        System.out.println("finished"); // 7Строка "finished" — это литерал, загруженный в Metaspace при загрузке класса
+                                         //Создаётся временный объект строки (если не interned), но быстро удаляется
+                                         //Вывод в консоль
     }
 
     private static void printAll(Object o, int i, Integer ii) {
